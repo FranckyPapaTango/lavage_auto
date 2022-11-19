@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>mgw</groupId>
     <artifactId>lavage_auto</artifactId>
-    <version>1.0-SNAPSHOT</version>    
+    <version>1.0-SNAPSHOT</version>
 
 
 <profiles>
     <profile>
-	<modules>
+        <id/>
+        <modules>
 		<module>domaine_lavage_auto</module>
-		<module>persistence_lavage_auto</module>                
+		<module>persistence_lavage_auto</module>
 		<module>web_lavage_auto</module>
-                
+
                 <!--<module>chat_websocket_spring</module>-->
-                
+
 <!--                <module>web-cms</module>
                 <module>web-salle</module>
-                
+
                 <module>web-chat</module>
                 <module>web-chat2</module>-->
             </modules>
@@ -57,13 +58,21 @@
                 <artifactId>h2</artifactId>
                 <scope>runtime</scope>
         </dependency> -->
-        <dependency>
+<!--        <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-             <version>8.0.13</version> 
-            <!-- <scope>runtime</scope> -->
+             <version>8.0.13</version>
+            &lt;!&ndash; <scope>runtime</scope> &ndash;&gt;
+        </dependency>-->
+
+        <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.4.1</version>
         </dependency>
-		
+
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
